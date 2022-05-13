@@ -1,4 +1,4 @@
-package com.example.data.di
+package com.example.mikecleanarchitecture
 
 import retrofit2.http.GET
 import retrofit2.http.Query

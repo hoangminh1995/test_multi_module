@@ -1,4 +1,4 @@
-package com.example.core.di
+package com.example.mikecleanarchitecture
 
 import dagger.Module
 import dagger.hilt.InstallIn

@@ -1,3 +1,5 @@
+import com.example.core.AndroidLibraries
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -25,9 +27,9 @@ android {
 }
 
 dependencies {
-    implementation(com.example.core.AndroidLibraries.coreKtx)
-    implementation(com.example.core.AndroidLibraries.appCompat)
-    implementation(com.example.core.AndroidLibraries.constraint)
-    implementation(com.example.core.AndroidLibraries.material)
-    implementation(com.example.core.AndroidLibraries.fragment)
+    implementation(AndroidLibraries.coreKtx)
+    implementation(AndroidLibraries.appCompat)
+    implementation(AndroidLibraries.constraint)
+    implementation(AndroidLibraries.material)
+    implementation(AndroidLibraries.fragment)
 }

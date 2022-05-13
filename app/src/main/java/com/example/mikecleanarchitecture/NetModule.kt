@@ -1,4 +1,4 @@
-package com.example.data.di
+package com.example.mikecleanarchitecture
 
 import android.app.Application
 import com.example.data.BuildConfig

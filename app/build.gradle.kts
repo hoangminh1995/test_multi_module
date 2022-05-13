@@ -1,16 +1,21 @@
+import com.example.core.AndroidLibraries
+import com.example.core.Libraries
+import com.example.core.Modules
+import com.example.core.Versions
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id ("kotlin-kapt")
-    id ("dagger.hilt.android.plugin")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
-    compileSdk = com.example.core.Versions.compileSdkVersion
+    compileSdk = Versions.compileSdkVersion
 
     defaultConfig {
-        minSdk = com.example.core.Versions.minSdk
-        targetSdk = com.example.core.Versions.targetSdk
+        minSdk = Versions.minSdk
+        targetSdk = Versions.targetSdk
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -20,23 +25,33 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = com.example.core.Versions.jvmTarget
+        jvmTarget = Versions.jvmTarget
         freeCompilerArgs =
             freeCompilerArgs.toMutableList().apply { add("-Xopt-in=kotlin.RequiresOptIn") }.toList()
     }
 }
 
-dependencies {
-    implementation(project(com.example.core.Modules.core))
-    implementation(project(com.example.core.Modules.common))
-    implementation(project(com.example.core.Modules.data))
-    implementation(project(com.example.core.Modules.domain))
+hilt {
+    enableExperimentalClasspathAggregation = true
+}
 
-    implementation (com.example.core.Libraries.daggerHilt)
-    kapt(com.example.core.Libraries.daggerHiltKapt)
-    implementation(com.example.core.AndroidLibraries.coreKtx)
-    implementation(com.example.core.AndroidLibraries.appCompat)
-    implementation(com.example.core.AndroidLibraries.constraint)
-    implementation(com.example.core.AndroidLibraries.material)
-    implementation(com.example.core.AndroidLibraries.fragment)
+dependencies {
+    implementation(project(Modules.core))
+    implementation(project(Modules.common))
+    implementation(project(Modules.data))
+    implementation(project(Modules.domain))
+
+    implementation(Libraries.daggerHilt)
+    kapt(Libraries.daggerHiltKapt)
+    implementation(AndroidLibraries.coreKtx)
+    implementation(AndroidLibraries.appCompat)
+    implementation(AndroidLibraries.constraint)
+    implementation(AndroidLibraries.material)
+    implementation(AndroidLibraries.fragment)
+
+//
+    implementation (Libraries.gson)
+    implementation (Libraries.loggingInterceptor)
+    implementation (Libraries.retrofit)
+    implementation (Libraries.retrofitConverter)
 }

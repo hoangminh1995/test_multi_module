@@ -1,4 +1,4 @@
-package com.example.weatherapplication
+package com.example.mikecleanarchitecture
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -31,10 +31,10 @@ android {
 }
 
 dependencies {
-    implementation (com.example.core.Libraries.daggerHilt)
+    implementation (Libraries.daggerHilt)
     kapt(Libraries.daggerHiltKapt)
-    implementation (com.example.core.Libraries.gson)
-    implementation (com.example.core.Libraries.loggingInterceptor)
-    implementation (com.example.core.Libraries.retrofit)
-    implementation (com.example.core.Libraries.retrofitConverter)
+    implementation (Libraries.gson)
+    implementation (Libraries.loggingInterceptor)
+    implementation (Libraries.retrofit)
+    implementation (Libraries.retrofitConverter)
 }

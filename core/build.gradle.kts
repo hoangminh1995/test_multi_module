@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+import com.example.core.Libraries
 
 plugins {
     id ("com.android.library")
@@ -29,6 +29,6 @@ android {
 }
 
 dependencies {
-    implementation (com.example.core.Libraries.daggerHilt)
-    kapt (com.example.core.Libraries.daggerHiltKapt)
+    implementation (Libraries.daggerHilt)
+    kapt (Libraries.daggerHiltKapt)
 }
