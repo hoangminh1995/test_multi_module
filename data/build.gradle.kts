@@ -1,4 +1,5 @@
 import com.example.core.Libraries
+import com.example.core.KotlinLibraries
 
 plugins {
     id ("com.android.library")
@@ -31,10 +32,14 @@ android {
 }
 
 dependencies {
+    implementation(project(com.example.core.Modules.common))
+    implementation(project(com.example.core.Modules.domain))
+
     implementation (Libraries.daggerHilt)
     kapt(Libraries.daggerHiltKapt)
-    implementation (Libraries.gson)
     implementation (Libraries.loggingInterceptor)
     implementation (Libraries.retrofit)
     implementation (Libraries.retrofitConverter)
+
+    implementation(KotlinLibraries.androidKotlinCoroutine)
 }

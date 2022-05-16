@@ -1,3 +1,4 @@
+
 plugins {
     id ("com.android.library")
     id ("org.jetbrains.kotlin.android")
@@ -24,4 +25,5 @@ android {
     }
 }
 dependencies {
+    implementation (com.example.core.Libraries.gson)
 }

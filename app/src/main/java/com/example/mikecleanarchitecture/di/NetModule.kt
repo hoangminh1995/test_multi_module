@@ -1,7 +1,8 @@
-package com.example.mikecleanarchitecture
+package com.example.mikecleanarchitecture.di
 
 import android.app.Application
 import com.example.data.BuildConfig
+import com.example.data.remote.api.WeatherService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module

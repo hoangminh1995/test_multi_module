@@ -1,6 +1,7 @@
-package com.example.mikecleanarchitecture
+package com.example.data.remote.api
 
-import com.google.gson.JsonElement
+import com.example.domain.entities.WeatherInfoResponse
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -16,5 +17,5 @@ interface WeatherService {
         @Query("cnt") numberOfForecastDays: Int = NUMBER_OF_FORECAST_DEFAULT,
         @Query("appid") appId: String = APP_ID_DEFAULT,
         @Query("units") units: String = UNIT_DEFAULT
-    ): JsonElement
+    ): Response<WeatherInfoResponse>
 }
