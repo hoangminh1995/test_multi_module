@@ -25,14 +25,12 @@ class DataModule {
     @Singleton
     internal fun provideDispatcherProvider(): DispatcherProvider = DefaultDispatcherProvider()
 
-    /// Provide Remote Data Sources ///
+    /// Provide Data Sources ///
 
     @Provides
     fun provideWeatherRemoteDataSource(weatherService: WeatherService): WeatherRemoteDataSource {
         return WeatherRemoteDataSourceImpl(weatherService)
     }
-
-    /// Provide Local Data Sources ///
 
     @Provides
     fun provideWeatherLocalDataSource(): WeatherLocalDataSource {

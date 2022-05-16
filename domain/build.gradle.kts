@@ -2,6 +2,7 @@
 plugins {
     id ("com.android.library")
     id ("org.jetbrains.kotlin.android")
+    id ("kotlin-kapt")
 }
 
 android {
@@ -25,5 +26,9 @@ android {
     }
 }
 dependencies {
+    implementation(project(com.example.core.Modules.common))
     implementation (com.example.core.Libraries.gson)
+    implementation (com.example.core.Libraries.daggerHilt)
+    kapt (com.example.core.Libraries.daggerHiltKapt)
+    implementation(com.example.core.KotlinLibraries.androidKotlinCoroutine)
 }
