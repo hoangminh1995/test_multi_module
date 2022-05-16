@@ -16,8 +16,6 @@ class GetWeatherUseCase @Inject constructor(
         numberOfForecastDays: Int,
         appId: String,
         units: String
-    ): Flow<NetworkStatus<WeatherInfoResponse>> = flow {
-        weatherRepository.getWeather(cityName, numberOfForecastDays, appId, units)
-    }
+    ): NetworkStatus<WeatherInfoResponse> = weatherRepository.getWeather(cityName, numberOfForecastDays, appId, units)
 
 }

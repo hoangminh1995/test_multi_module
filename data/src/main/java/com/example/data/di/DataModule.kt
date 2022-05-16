@@ -1,4 +1,4 @@
-package com.example.mikecleanarchitecture.di
+package com.example.data.di
 
 import com.example.data.coroutines.DefaultDispatcherProvider
 import com.example.data.coroutines.DispatcherProvider

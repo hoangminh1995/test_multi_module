@@ -38,6 +38,7 @@ object Versions {
     val kotlinVersion = "1.4.10"
     val kotlinCoroutine = "1.3.5-native-mt"
     val retrofit = "2.9.0"
+    val lifecycleVersion = "2.4.0-alpha03"
 }
 
 object Libraries {
@@ -64,6 +65,11 @@ object KotlinLibraries {
 object AndroidLibraries {
     val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleVersion}"
+    val lifecycleCommon = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycleVersion}"
+    val lifecycleViewModel =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleVersion}"
+    val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleVersion}"
     val constraint = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     val material = "com.google.android.material:material:${Versions.material}"
     val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
