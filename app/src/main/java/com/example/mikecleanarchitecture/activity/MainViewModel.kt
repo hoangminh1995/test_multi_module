@@ -18,8 +18,7 @@ class MainViewModel @Inject constructor(
     fun getWeather(cityName: String) = flow {
         emit(NetworkStatus.Loading())
         when (val result = getWeatherUseCase.invoke(
-            cityName, NUMBER_OF_FORECAST_DEFAULT,
-            APP_ID_DEFAULT, UNIT_DEFAULT
+            cityName, NUMBER_OF_FORECAST_DEFAULT, APP_ID_DEFAULT, UNIT_DEFAULT
         )) {
             is NetworkStatus.Success -> emit(NetworkStatus.Success(result.data))
             is NetworkStatus.Error -> emit(NetworkStatus.Error(result.errorMessage, null))

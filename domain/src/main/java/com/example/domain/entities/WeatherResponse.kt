@@ -2,7 +2,7 @@ package com.example.domain.entities
 
 import com.google.gson.annotations.SerializedName
 
-data class Weather(
-    @SerializedName("description")
-    val description: String
+data class WeatherResponse(
+    @SerializedName("list")
+    val list: List<WeatherInfo>
 )

@@ -4,9 +4,9 @@ import com.example.common.utils.network.NetworkStatus
 import com.example.data.coroutines.DispatcherProvider
 import com.example.data.local.WeatherLocalDataSource
 import com.example.data.remote.datasource.WeatherRemoteDataSource
-import com.example.domain.entities.WeatherInfoResponse
+import com.example.domain.entities.WeatherInfo
+import com.example.domain.entities.WeatherResponse
 import com.example.domain.repository.WeatherRepository
-import com.google.gson.JsonElement
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
@@ -21,7 +21,7 @@ class WeatherRepositoryImpl @Inject constructor(
         numberOfForecastDays: Int,
         appId: String,
         units: String
-    ): NetworkStatus<WeatherInfoResponse> {
+    ): NetworkStatus<WeatherResponse> {
         return withContext(dispatcherProvider.io()) {
             weatherRemoteDataSource.getWeather(cityName, numberOfForecastDays, appId, units)
         }

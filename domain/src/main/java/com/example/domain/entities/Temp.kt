@@ -7,6 +7,4 @@ data class Temp(
     val min: Double,
     @SerializedName("max")
     val max: Double
-) {
-    fun getAverage() = ((min + max) / 2).toInt()
-}
+)

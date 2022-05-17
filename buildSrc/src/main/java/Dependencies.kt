@@ -6,7 +6,6 @@ object ApplicationId {
 
 object Modules {
     val common = ":common"
-    val core = ":core"
     val data = ":data"
     val domain = ":domain"
 }

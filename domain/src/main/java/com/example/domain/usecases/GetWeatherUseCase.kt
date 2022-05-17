@@ -1,10 +1,8 @@
 package com.example.domain.usecases
 
 import com.example.common.utils.network.NetworkStatus
-import com.example.domain.entities.WeatherInfoResponse
+import com.example.domain.entities.WeatherResponse
 import com.example.domain.repository.WeatherRepository
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class GetWeatherUseCase @Inject constructor(
@@ -16,6 +14,6 @@ class GetWeatherUseCase @Inject constructor(
         numberOfForecastDays: Int,
         appId: String,
         units: String
-    ): NetworkStatus<WeatherInfoResponse> = weatherRepository.getWeather(cityName, numberOfForecastDays, appId, units)
+    ): NetworkStatus<WeatherResponse> = weatherRepository.getWeather(cityName, numberOfForecastDays, appId, units)
 
 }

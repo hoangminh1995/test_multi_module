@@ -36,7 +36,6 @@ hilt {
 }
 
 dependencies {
-    implementation(project(Modules.core))
     implementation(project(Modules.common))
     implementation(project(Modules.data))
     implementation(project(Modules.domain))

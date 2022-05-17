@@ -1,6 +1,6 @@
 package com.example.data.remote.api
 
-import com.example.domain.entities.WeatherInfoResponse
+import com.example.domain.entities.WeatherResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -14,8 +14,8 @@ interface WeatherService {
     @GET("forecast/daily")
     suspend fun getWeather(
         @Query("q") cityName: String,
-        @Query("cnt") numberOfForecastDays: Int = NUMBER_OF_FORECAST_DEFAULT,
-        @Query("appid") appId: String = APP_ID_DEFAULT,
-        @Query("units") units: String = UNIT_DEFAULT
-    ): Response<WeatherInfoResponse>
+        @Query("cnt") numberOfForecastDays: Int,
+        @Query("appid") appId: String,
+        @Query("units") units: String
+    ): Response<WeatherResponse>
 }
