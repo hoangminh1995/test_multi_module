@@ -1,7 +1,7 @@
 package com.example.data.di
 
-import com.example.data.coroutines.DefaultDispatcherProvider
-import com.example.data.coroutines.DispatcherProvider
+import com.example.data.utils.coroutines.DispatcherProviderImpl
+import com.example.data.utils.coroutines.DispatcherProvider
 import com.example.data.local.WeatherLocalDataSource
 import com.example.data.local.WeatherLocalDataSourceImpl
 import com.example.data.remote.api.WeatherService
@@ -23,7 +23,7 @@ class DataModule {
 
     @Provides
     @Singleton
-    internal fun provideDispatcherProvider(): DispatcherProvider = DefaultDispatcherProvider()
+    internal fun provideDispatcherProvider(): DispatcherProvider = DispatcherProviderImpl()
 
     /// Provide Data Sources ///
 

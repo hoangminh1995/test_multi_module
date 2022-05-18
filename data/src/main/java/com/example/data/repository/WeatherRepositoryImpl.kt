@@ -1,10 +1,9 @@
 package com.example.data.repository
 
 import com.example.common.utils.network.NetworkStatus
-import com.example.data.coroutines.DispatcherProvider
+import com.example.data.utils.coroutines.DispatcherProvider
 import com.example.data.local.WeatherLocalDataSource
 import com.example.data.remote.datasource.WeatherRemoteDataSource
-import com.example.domain.entities.WeatherInfo
 import com.example.domain.entities.WeatherResponse
 import com.example.domain.repository.WeatherRepository
 import kotlinx.coroutines.withContext

@@ -1,4 +1,4 @@
-package com.example.data
+package com.example.data.utils
 
 import com.example.common.utils.network.NetworkConstant.CONNECT_EXCEPTION
 import com.example.common.utils.network.NetworkConstant.SOCKET_TIME_OUT_EXCEPTION
