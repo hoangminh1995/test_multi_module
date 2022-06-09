@@ -37,6 +37,7 @@ object Versions {
     val kotlinVersion = "1.4.10"
     val kotlinCoroutine = "1.3.5-native-mt"
     val retrofit = "2.9.0"
+    val roomVersion = "2.2.5"
     val lifecycleVersion = "2.4.0-alpha03"
 }
 
@@ -72,4 +73,9 @@ object AndroidLibraries {
     val constraint = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     val material = "com.google.android.material:material:${Versions.material}"
     val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+
+    // ROOM
+    val room = "androidx.room:room-runtime:${Versions.roomVersion}"
+    val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+    val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
 }

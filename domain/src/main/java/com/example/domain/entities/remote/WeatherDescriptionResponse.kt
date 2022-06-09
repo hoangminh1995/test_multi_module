@@ -1,8 +1,8 @@
-package com.example.domain.entities
+package com.example.domain.entities.remote
 
 import com.google.gson.annotations.SerializedName
 
-data class WeatherDescription(
+data class WeatherDescriptionResponse(
     @SerializedName("description")
     val description: String
 )

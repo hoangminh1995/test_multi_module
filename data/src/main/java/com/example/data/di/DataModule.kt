@@ -2,8 +2,9 @@ package com.example.data.di
 
 import com.example.data.utils.coroutines.DispatcherProviderImpl
 import com.example.data.utils.coroutines.DispatcherProvider
-import com.example.data.local.WeatherLocalDataSource
-import com.example.data.local.WeatherLocalDataSourceImpl
+import com.example.data.local.datasource.WeatherLocalDataSource
+import com.example.data.local.datasource.WeatherLocalDataSourceImpl
+import com.example.data.local.database.WeatherDao
 import com.example.data.remote.api.WeatherService
 import com.example.data.remote.datasource.WeatherRemoteDataSource
 import com.example.data.remote.datasource.WeatherRemoteDataSourceImpl
@@ -33,8 +34,8 @@ class DataModule {
     }
 
     @Provides
-    fun provideWeatherLocalDataSource(): WeatherLocalDataSource {
-        return WeatherLocalDataSourceImpl()
+    fun provideWeatherLocalDataSource(weatherDao: WeatherDao): WeatherLocalDataSource {
+        return WeatherLocalDataSourceImpl(weatherDao)
     }
 
     /// Provide repositories ///

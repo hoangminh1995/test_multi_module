@@ -1,8 +1,7 @@
 package com.example.data.remote.datasource
 
 import com.example.common.utils.network.NetworkStatus
-import com.example.domain.entities.WeatherInfo
-import com.example.domain.entities.WeatherResponse
+import com.example.domain.entities.remote.WeatherResponse
 
 interface WeatherRemoteDataSource {
     suspend fun getWeather(

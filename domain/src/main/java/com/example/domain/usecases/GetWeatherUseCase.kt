@@ -1,7 +1,7 @@
 package com.example.domain.usecases
 
 import com.example.common.utils.network.NetworkStatus
-import com.example.domain.entities.WeatherResponse
+import com.example.domain.entities.remote.WeatherResponse
 import com.example.domain.repository.WeatherRepository
 import javax.inject.Inject
 

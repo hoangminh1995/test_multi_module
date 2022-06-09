@@ -1,5 +1,7 @@
 import com.example.core.Libraries
 import com.example.core.KotlinLibraries
+import com.example.core.AndroidLibraries
+import com.example.core.Modules
 
 plugins {
     id ("com.android.library")
@@ -32,14 +34,18 @@ android {
 }
 
 dependencies {
-    implementation(project(com.example.core.Modules.common))
-    implementation(project(com.example.core.Modules.domain))
+    implementation(project(Modules.common))
+    implementation(project(Modules.domain))
 
     implementation (Libraries.daggerHilt)
     kapt(Libraries.daggerHiltKapt)
     implementation (Libraries.loggingInterceptor)
     implementation (Libraries.retrofit)
     implementation (Libraries.retrofitConverter)
+
+    implementation (AndroidLibraries.room)
+    implementation (AndroidLibraries.roomCompiler)
+    implementation (AndroidLibraries.roomKtx)
 
     implementation(KotlinLibraries.androidKotlinCoroutine)
 }

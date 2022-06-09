@@ -1,7 +1,7 @@
 package com.example.domain.repository
 
 import com.example.common.utils.network.NetworkStatus
-import com.example.domain.entities.WeatherResponse
+import com.example.domain.entities.remote.WeatherResponse
 
 interface WeatherRepository {
     suspend fun getWeather(

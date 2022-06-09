@@ -1,6 +1,6 @@
 package com.example.data.remote.api
 
-import com.example.domain.entities.WeatherResponse
+import com.example.domain.entities.remote.WeatherResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
