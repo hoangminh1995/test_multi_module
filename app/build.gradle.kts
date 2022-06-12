@@ -51,10 +51,4 @@ dependencies {
     implementation(AndroidLibraries.constraint)
     implementation(AndroidLibraries.material)
     implementation(AndroidLibraries.fragment)
-
-//
-    implementation (Libraries.gson)
-    implementation (Libraries.loggingInterceptor)
-    implementation (Libraries.retrofit)
-    implementation (Libraries.retrofitConverter)
 }

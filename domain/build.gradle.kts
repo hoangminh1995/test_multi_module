@@ -32,12 +32,10 @@ android {
 dependencies {
     implementation(project(Modules.common))
 
-    implementation (Libraries.gson)
     implementation (Libraries.daggerHilt)
     kapt (Libraries.daggerHiltKapt)
 
-    implementation(KotlinLibraries.androidKotlinCoroutine)
-
+    implementation (Libraries.gson)
     implementation (AndroidLibraries.room)
     implementation (AndroidLibraries.roomCompiler)
 }

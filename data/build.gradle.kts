@@ -46,6 +46,4 @@ dependencies {
     implementation (AndroidLibraries.room)
     implementation (AndroidLibraries.roomCompiler)
     implementation (AndroidLibraries.roomKtx)
-
-    implementation(KotlinLibraries.androidKotlinCoroutine)
 }

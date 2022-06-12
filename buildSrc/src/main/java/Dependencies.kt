@@ -26,12 +26,9 @@ object Versions {
     val loggingInterceptor = "4.9.0"
     val gson = "2.8.5"
 
-    val androidTestRunner = "1.2.0"
-    val androidJunit = "1.1.0"
     val constraintLayout = "2.1.0"
     val coroutines = "1.3.5"
     val dagger = "2.24"
-    val espressoCore = "3.2.0"
     val fragment = "1.3.2"
     val gradle = "4.0.1"
     val kotlinVersion = "1.4.10"

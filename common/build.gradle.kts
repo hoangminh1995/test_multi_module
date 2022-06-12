@@ -1,4 +1,3 @@
-import com.example.core.AndroidLibraries
 
 plugins {
     id("com.android.library")
@@ -27,9 +26,4 @@ android {
 }
 
 dependencies {
-    implementation(AndroidLibraries.coreKtx)
-    implementation(AndroidLibraries.appCompat)
-    implementation(AndroidLibraries.constraint)
-    implementation(AndroidLibraries.material)
-    implementation(AndroidLibraries.fragment)
 }
