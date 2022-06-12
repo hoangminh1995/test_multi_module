@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.activity.viewModels
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
-import com.example.common.base.BaseActivity
+import com.example.mikecleanarchitecture.base.BaseActivity
 import com.example.common.utils.network.NetworkStatus
 import com.example.mikecleanarchitecture.R
 import dagger.hilt.android.AndroidEntryPoint
