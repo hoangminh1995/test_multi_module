@@ -42,6 +42,7 @@ dependencies {
 
     implementation(Libraries.daggerHilt)
     kapt(Libraries.daggerHiltKapt)
+    
     implementation(AndroidLibraries.coreKtx)
     implementation(AndroidLibraries.lifecycleRuntime)
     implementation(AndroidLibraries.lifecycleCommon)
